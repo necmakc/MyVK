@@ -3,7 +3,8 @@
 //  MyVK
 //
 //  Created by Максим Марков on 20.05.2022.
-//111
+//lesson 2
+//lesson 2-2
 
 import UIKit
 
