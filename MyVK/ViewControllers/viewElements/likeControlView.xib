@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="likeControlView" customModule="MyVK" customModuleProvider="target">
+            <connections>
+                <outlet property="heartCounterlabel" destination="JMp-rj-9kd" id="5w8-PI-Ta7"/>
+                <outlet property="heartImageVIew" destination="xfm-tR-qOT" id="sY9-UJ-F53"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xfm-tR-qOT">
+                    <rect key="frame" x="128" y="1.5" width="66" height="63.5"/>
+                    <color key="tintColor" red="0.95375631309999997" green="0.16898898900000001" blue="0.11939337830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xfm-tR-qOT" secondAttribute="height" multiplier="1:1" id="j3I-M7-GbP"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23423" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMp-rj-9kd">
+                    <rect key="frame" x="74" y="22.5" width="54" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3A-7j-E5B">
+                    <rect key="frame" x="128" y="0.0" width="66" height="66"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="pressLikeButton:" destination="-1" eventType="touchUpInside" id="JKN-Bl-AbK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.15836451739999999" green="0.2384032559" blue="0.31135574490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="xfm-tR-qOT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6Rm-mH-KDn"/>
+                <constraint firstItem="I3A-7j-E5B" firstAttribute="width" secondItem="xfm-tR-qOT" secondAttribute="width" id="C2l-hR-YqH"/>
+                <constraint firstItem="xfm-tR-qOT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ILb-0q-uAo"/>
+                <constraint firstItem="xfm-tR-qOT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LN4-Lw-lsJ"/>
+                <constraint firstItem="xfm-tR-qOT" firstAttribute="leading" secondItem="JMp-rj-9kd" secondAttribute="trailing" id="Uyx-j0-497"/>
+                <constraint firstItem="I3A-7j-E5B" firstAttribute="centerY" secondItem="xfm-tR-qOT" secondAttribute="centerY" id="X9C-R9-3Mz"/>
+                <constraint firstItem="JMp-rj-9kd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bLL-yV-x8r"/>
+                <constraint firstItem="I3A-7j-E5B" firstAttribute="centerX" secondItem="xfm-tR-qOT" secondAttribute="centerX" id="pdS-wa-Scl"/>
+                <constraint firstItem="I3A-7j-E5B" firstAttribute="height" secondItem="xfm-tR-qOT" secondAttribute="height" id="sUh-1b-VdN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="65.217391304347828" y="110.49107142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+    </resources>
+</document>
