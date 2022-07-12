@@ -9,8 +9,10 @@ import Foundation
 
 class Session {
     private init() {}
+    
     static let sharedInstance = Session()
-    let token: String = ""
+    
+    var token: String = ""
     let userId: Int = 0
     let userName: String = "user23425"
 }

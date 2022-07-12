@@ -35,6 +35,8 @@
 		B5720F322848B53F00871D83 /* MyFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5720F312848B53F00871D83 /* MyFriendsVC.swift */; };
 		B579FA072849500800EDC515 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B579FA052849500800EDC515 /* CustomTableViewCell.swift */; };
 		B579FA082849500800EDC515 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B579FA062849500800EDC515 /* CustomTableViewCell.xib */; };
+		B5A8B26C287E074000A60D7C /* VkLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A8B26B287E074000A60D7C /* VkLoginVC.swift */; };
+		B5A8B26E287E0DF500A60D7C /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A8B26D287E0DF500A60D7C /* Requests.swift */; };
 		B5BA66162869152800DC428E /* MyFriendsVC + NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BA66152869152800DC428E /* MyFriendsVC + NavigationDelegate.swift */; };
 		B5BA6618286915A500DC428E /* AnimatorNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BA6617286915A500DC428E /* AnimatorNavigation.swift */; };
 		B5BA661A2869B97900DC428E /* AnimatorNavigationBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BA66192869B97900DC428E /* AnimatorNavigationBack.swift */; };
@@ -74,6 +76,8 @@
 		B5720F312848B53F00871D83 /* MyFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsVC.swift; sourceTree = "<group>"; };
 		B579FA052849500800EDC515 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		B579FA062849500800EDC515 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		B5A8B26B287E074000A60D7C /* VkLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLoginVC.swift; sourceTree = "<group>"; };
+		B5A8B26D287E0DF500A60D7C /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		B5BA66152869152800DC428E /* MyFriendsVC + NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyFriendsVC + NavigationDelegate.swift"; sourceTree = "<group>"; };
 		B5BA6617286915A500DC428E /* AnimatorNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorNavigation.swift; sourceTree = "<group>"; };
 		B5BA66192869B97900DC428E /* AnimatorNavigationBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorNavigationBack.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				B507A7AC2840F7F1001C5BBF /* Main.storyboard */,
+				B5A8B26B287E074000A60D7C /* VkLoginVC.swift */,
+				B5A8B26D287E0DF500A60D7C /* Requests.swift */,
 				B536BA0F2837F02100DAACC3 /* LoginVC.swift */,
 				B56CF7D928611FB800224507 /* GalleryFriend */,
 				B5288BD028515D95005AFA6D /* viewElements */,
@@ -311,12 +317,14 @@
 				B536BA102837F02100DAACC3 /* LoginVC.swift in Sources */,
 				B5BA661A2869B97900DC428E /* AnimatorNavigationBack.swift in Sources */,
 				B536BA0C2837F02100DAACC3 /* AppDelegate.swift in Sources */,
+				B5A8B26C287E074000A60D7C /* VkLoginVC.swift in Sources */,
 				B5288BCF28515D61005AFA6D /* likeControlView.swift in Sources */,
 				B56CF7D728611EA100224507 /* ViewController.swift in Sources */,
 				B53B65D9284EB730006A9962 /* AllGroupsVC + Delegate.swift in Sources */,
 				B5DF7842284D6CB500DFFB29 /* Group.swift in Sources */,
 				B5BA6618286915A500DC428E /* AnimatorNavigation.swift in Sources */,
 				B5DF7844284D6DEA00DFFB29 /* MyGroupVC.swift in Sources */,
+				B5A8B26E287E0DF500A60D7C /* Requests.swift in Sources */,
 				B5EA9C552849436500D9B677 /* Friend.swift in Sources */,
 				B524E449284CE821000EBE92 /* CollectionFriendVC+DataSource.swift in Sources */,
 				B56B8EB6284CD4A400142763 /* CollectionFriendVC.swift in Sources */,
@@ -484,6 +492,9 @@
 				DEVELOPMENT_TEAM = VU64F27JG3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyVK/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -512,6 +523,9 @@
 				DEVELOPMENT_TEAM = VU64F27JG3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyVK/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
