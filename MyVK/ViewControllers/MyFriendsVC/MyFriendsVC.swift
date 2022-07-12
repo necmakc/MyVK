@@ -8,14 +8,44 @@
 import UIKit
 
 class MyFriendsVC: UIViewController {
-   // var searchBarHeight: CGSize
+
     var searchVisible = false
+    
     @IBOutlet weak var searchBarConstrHeight: NSLayoutConstraint!
     @IBOutlet var myFriendView: UIView!
     @IBOutlet weak var searchFriend: UISearchBar!
     @IBOutlet weak var friendTableView: UITableView!
+    
     let friendCellReuseIdentifier = "friendCellReuseIdentifier"
     let fromMyFriendsToCollectionSegue = "fromMyFriendsToCollectionSegue"
+
+    
+    
+    // MARK: - viewDidLoad
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        print(Session.sharedInstance.token)
+        myFriends = fillData()
+        myFriends = myFriends.sorted(by: {$0.name < $1.name})
+        friendTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: friendCellReuseIdentifier)
+        friendTableView.dataSource = self
+        friendTableView.delegate = self
+        searchFriend.delegate = self
+        self.navigationController?.delegate = self
+        myFriendsSearch = myFriends
+        
+        
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       // searchFriend.alpha = 0
+        searchBarConstrHeight.constant = 0
+        searchFriend.center.x += view.bounds.width
+    }
+  
     
     @IBAction func searchButton(_ sender: Any) {
         let widthView = view.bounds.width
@@ -41,52 +71,7 @@ class MyFriendsVC: UIViewController {
         }
         
         }
-        
-        
-        
-//        UIView.animate(withDuration: 2,
-//                       delay: 0,
-//                       options: []) { [weak self] in
-//            if self?.searchVisible == false {
-//            self?.searchBarConstrHeight.constant = 51
-//            self?.searchFriend.center.x -= widthView
-//            self?.searchVisible = true
-//            } else {
-//                self?.searchBarConstrHeight.constant = 0
-//                self?.searchFriend.center.x += widthView
-//                self?.searchVisible = false
-//            }
-//        }
-
-
-
-        
-
     
-    
-    // MARK: - viewDidLoad
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        myFriends = fillData()
-        myFriends = myFriends.sorted(by: {$0.name < $1.name})
-        friendTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: friendCellReuseIdentifier)
-        friendTableView.dataSource = self
-        friendTableView.delegate = self
-        searchFriend.delegate = self
-        self.navigationController?.delegate = self
-        myFriendsSearch = myFriends
-        
-        
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-       // searchFriend.alpha = 0
-        searchBarConstrHeight.constant = 0
-        searchFriend.center.x += view.bounds.width
-    }
-  
     // MARK: - functions
     
     func fillData() -> [Friend] {
