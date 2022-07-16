@@ -25,15 +25,22 @@ class MyFriendsVC: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        print(Session.sharedInstance.token)
+        
         myFriends = fillData()
         myFriends = myFriends.sorted(by: {$0.name < $1.name})
         friendTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: friendCellReuseIdentifier)
+        
         friendTableView.dataSource = self
         friendTableView.delegate = self
         searchFriend.delegate = self
         self.navigationController?.delegate = self
         myFriendsSearch = myFriends
+        
+        let request = Requests()
+        request.getFriendList()
+        request.getPhotos(idUser: "12345")
+        request.getGroupsList()
+        request.searchGlobalGroups(searchByWord: "Music")
         
         
         
